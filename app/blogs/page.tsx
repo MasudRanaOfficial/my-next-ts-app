@@ -1,7 +1,7 @@
 import React from "react";
 import Blog from "../components/Blog";
 
-const blogsData = [
+const blogsData: Blogs[] = [
   {
     id: 1,
     title: "What Is JavaScript?",
@@ -74,15 +74,23 @@ const blogsData = [
   },
 ];
 
+export interface Blogs {
+  id: number;
+  title: string;
+  description: string;
+  author: string;
+  category: string;
+  date: string;
+  image: string;
+}
+
 const BlogsPage = () => {
   return (
     <div>
       <h2>Our Blogs</h2>
-      {
-        blogsData.map(post => (
-          <Blog key={post.id} post={post}></Blog>
-        ))
-      }
+      {blogsData.map((post) => (
+        <Blog key={post.id} post={post}></Blog>
+      ))}
     </div>
   );
 };

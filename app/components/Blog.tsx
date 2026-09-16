@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Blog = ({post}) => {
+import type { Blogs } from '../blogs/page';
+interface BlogPostProps {
+  post: Blogs;
+}
+const Blog = ({post}: BlogPostProps) => {
 
   const {title, description} = post;
   return (
