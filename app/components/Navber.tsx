@@ -1,29 +1,67 @@
+'use client'
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 const Navber = () => {
+
+  const pathname = usePathname();
   const links = (
     <>
       <li>
-        <Link href="/docs">Docs</Link>
+        <Link
+          className={pathname === "/docs" ? "text-blue-400" : ""}
+          href="/docs"
+        >
+          Docs
+        </Link>
       </li>
       <li>
-        <Link href="/showcase">Showcase</Link>
+        <Link
+          className={pathname === "/showcase" ? "text-blue-400" : ""}
+          href="/showcase"
+        >
+          Showcase
+        </Link>
       </li>
       <li>
-        <Link href="/blogs">Blogs</Link>
+        <Link
+          className={pathname === "/blogs" ? "text-blue-400" : ""}
+          href="/blogs"
+        >
+          Blogs
+        </Link>
       </li>
       <li>
-        <Link href="/about">About</Link>
+        <Link
+          className={pathname === "/about" ? "text-blue-400" : ""}
+          href="/about"
+        >
+          About
+        </Link>
       </li>
       <li>
-        <Link href="/dashboard">Dashboard</Link>
+        <Link
+          className={pathname === "/dashboard" ? "text-blue-400" : ""}
+          href="/dashboard"
+        >
+          Dashboard
+        </Link>
       </li>
       <li>
-        <Link href="/users">Users</Link>
+        <Link
+          className={pathname === "/users" ? "text-blue-400" : ""}
+          href="/users"
+        >
+          Users
+        </Link>
       </li>
       <li>
-        <Link href="/about/developers">Developers</Link>
+        <Link
+          className={pathname === "/about/developers" ? "text-blue-400" : ""}
+          href="/about/developers"
+        >
+          Developers
+        </Link>
       </li>
     </>
   );
