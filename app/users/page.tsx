@@ -1,5 +1,10 @@
 import React from "react";
 
+export const metadata = {
+  title: "Users",
+  description: "...",
+};
+
 import type { User } from "../types/userdata";
 import Link from "next/link";
 

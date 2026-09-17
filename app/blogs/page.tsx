@@ -1,5 +1,9 @@
 import React from "react";
 import Blog from "../components/Blog";
+export const metadata = {
+  title: "Blogs",
+  description: "...",
+};
 
 const blogsData: Blogs[] = [
   {
